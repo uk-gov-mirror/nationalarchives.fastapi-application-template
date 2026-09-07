@@ -1,7 +1,7 @@
 import os
 
 
-def get_config(config_class: str = None, key: str = None) -> dict:
+def get_config(config_class: str | None = None, key: str | None = None) -> dict:
     if not config_class:
         config_class = os.getenv("CONFIG", "config.Production")
     components = config_class.split(".")
